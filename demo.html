@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<style>
+		body{
+			background: url('image/background2.jpg') center;
+		}
+		.top{
+			width: 1262px;
+			height: 69px;
+		}
+		.bbtn{
+			border-radius: 5px;
+			margin-left: 1125px;
+			margin-top: 80px;
+			background-color: orange;
+			color: white;
+			border: orange;
+		}
+		.box{
+			width: 550px;
+			height: 440px;
+			border: 2px orange;
+			border-style: dashed;
+			margin: 0 0 0 650px;
+		}
+		.tit{
+			width: 550px;
+			height: 40px;
+		}
+		.tit_small{
+			width: 140px;
+			height: 40px;
+			border-bottom: 2px solid orange;
+			margin-left:200px ;
+		}
+		.tit_small p{
+			font-size: 25px;
+			color: gray;
+		}
+		.text_name{
+			width: 550px;
+			height: 100px;
+		}
+		.text_psd{
+			width: 550px;
+			height: 100px;
+		}
+		.text_tel{
+			width: 550px;
+			height: 100px;
+		}
+		.inp{
+			width: 510px;
+			height: 50px;
+			margin:10px 20px ;
+			text-align: center;
+		}
+		.last{
+			width: 510px;
+			height: 30px;
+			margin:10px 20px ;
+			text-align: center;
+		}
+		.llast{
+			height: 20px;
+		}
+		.llast a{
+			text-decoration: none;
+			margin-left: 380px;
+			color: gray;
+		}
+		.btn{
+			width: 400px;
+			height: 40px;
+			border-radius: 5px;
+			color: white;
+			background:orange;
+			border: orange;
+		}
+		.notice{
+			height: 15px;
+			line-height: 15px;
+			font-size: 12px;
+			text-decoration: none;
+			margin-left: 20px;
+			margin-top: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="top">
+		<button class="bbtn" onclick="window.location.href = '#'">返回首页</button>
+	</div>
+	<div class="box">
+		<div class="tit">
+			<div class="tit_small">
+				<p>ʚ 注册账号 ɞ</p>
+			</div>
+		</div>
+		<div class="text_name">
+			<input class="inp" type="text" placeholder="请输入您的昵称">
+			<p class="notice"></p>
+		</div>
+		<div class="text_psd">
+			<input class="inp" type="password" placeholder="请输入您的密码">
+			<p class="notice"></p>
+		</div>
+		<div class="text_tel">
+			<input class="inp" type="text" placeholder="请输入您常使用的手机号码">
+			<p class="notice"></p>
+		</div>
+		<div class="last">
+			<button class="btn">点击注册</button>
+		</div>
+		<div class="llast">
+			<a href="demo6.html">已有账号？点我登录！</a>
+		</div>
+	</div>
+</body>
+<script>
+	var inp = document.getElementsByClassName("inp");
+	var notice = document.getElementsByClassName("notice");
+	inp[0].onfocus = function(){
+		notice[0].innerHTML ="请输入4-10位用户名";
+	}
+	inp[0].onblur = function(){
+		notice[0].innerHTML="";
+	}
+	inp[1].onfocus = function(){
+		notice[1].innerHTML ="请输入6-12位密码";
+	}
+	inp[1].onblur = function(){
+		notice[1].innerHTML ="";
+	}
+	inp[2].onfocus = function(){
+		notice[2].innerHTML ="请按照手机号的有效格式填写";
+	}
+	inp[2].onblur = function(){
+		notice[2].innerHTML ="";
+	}
+	var btn = document.getElementsByClassName("btn");
+	btn[0].onclick = function(){
+		// var a = isNaN(telnum);
+		var na = inp[0].value;
+		var passwd = inp[1].value;
+		var telnum = inp[2].value;
+		if(na.length==0 || na.length<4 || na.length>10){
+			notice[0].innerHTML="用户名位数错误";
+		}
+		if(passwd.length==0 || passwd.length<6 || passwd.length>12){
+			notice[1].innerHTML ="密码位数错误";
+		}
+		if(telnum.length!=11 || isNaN(telnum)==true){
+			notice[2].innerHTML ="手机号码输入有误";
+		}
+		if(na.length>3&&na.length<11&&passwd.length>5&&passwd.length<13&&telnum.length==11){
+			alert("恭喜你成功注册成为爱宠之家的用户！");
+		}
+	}
+
+</script>
+</html>

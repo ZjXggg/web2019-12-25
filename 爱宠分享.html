@@ -27,11 +27,11 @@
       <li class="daohanglan">
         <ul>
           <li class="menu"><a href="#" id="e" >首页</a></li>
-          <li class="menu"><a href="#" id="x1">我是消费者</a></li>
+          <li class="menu"><a href="#" id="x1" >我是消费者</a></li>
           <li class="menu"><a href="#" id="x2" >我是营销者</a></li>
-          <li class="menu"><a href="#" id="f">爱宠商城</a></li>
+          <li class="menu"><a href="#" id="f" >爱宠商城</a></li>
           <li class="menu"><a href="#" id="g">爱宠分享</a></li>
-          <li class="menu"><a href="#" id="x3" >关于我们</a></li>
+          <li class="menu"><a href="#" id="x3">关于我们</a></li>
         </ul>
       </li>
     </ul>
@@ -189,12 +189,11 @@
   // 登录注册
   var cc = document.getElementById("cc");
   var dd = document.getElementById("dd");
-   cc.onclick = function(){
+  cc.onclick = function(){
     window.location.href="https://zjxggg.github.io/web2019-12-25/demo6.html";
   }
   dd.onclick = function(){
-    window.location.href="https://zjxggg.github.io/web2019-12-25/demo.html
-";
+    window.location.href="https://zjxggg.github.io/web2019-12-25/demo.html";
   }
 
   //跳转页面
@@ -222,6 +221,8 @@
   x3.onclick = function(){
      alert("正在建设中");
   }
+  e.mouseover = airport(e);
+  e.mouseout = airporthover(e);
   /* 匀速运动文字*/
   var no = document.getElementById("no");
   setInterval(function(){

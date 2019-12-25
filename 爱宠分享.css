@@ -1,0 +1,203 @@
+*{
+  padding:0px;
+  margin: 0 auto;
+}
+body, ul, li，button{
+  font-size:18px;
+  text-decoration: none;
+  list-style:none;
+}
+a{
+  text-decoration:none;
+}
+input{
+  border:0;
+}
+body{
+  background-color:#fff;
+}
+/* 文字滚动*/
+.nav1{
+  height: 25px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #404040;
+}
+.no{
+  width: 1100px;
+  height: 25px;
+  margin: 0 auto;
+  font-family: 微软雅黑;
+  font-size: 20px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.no>p{
+  position: absolute;
+  left: 1150px;
+}
+/* 左右查找 */
+.containe{
+  margin-top: 20px;
+  padding-left: 30px;
+  color: green;
+  font-family: 微软雅黑;
+  font-size: 30px;
+  border-bottom: 3px solid green;
+}
+.containe a{
+  color: green;
+}
+.containe1{
+  width: 1200px;
+  height:320px;
+  margin-top: 30px;
+  margin-left: 45px;
+  padding-top: 30px;
+  border: 1px solid black;
+  position: relative;
+  overflow: hidden;
+}
+.container a{
+  color: green;
+}
+#lun{
+  width: 2500px;
+  height:300px;
+  margin:0 auto;
+  position: absolute;
+  left: -235px;
+  /* border: 1px solid black; */
+}
+.containe1 ul li{
+  width:200px;
+  height:250px;
+  border:#888888 solid 1px;
+  margin-left:32px;
+  float:left;
+  overflow: hidden;
+  border-color: #888888;
+}
+
+.container>span{
+  display: black;
+  width: 30px;
+  height: 50px;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  top: 175px;
+  line-height: 50px;
+  background: rgb(255,0,0);
+  position: absolute;
+  opacity: 0;
+}
+.
+/* 爱宠分享 */
+.nav3{
+  height: 800px;
+  margin: 0 auto;
+}
+.container{
+  margin-top: 20px;
+  padding-left: 30px;
+  color: green;
+  border-bottom: 3px solid green;
+  font-size: 30px;
+}
+
+.container1{
+  margin:0 auto;
+}
+.container1 ul{
+  height:750px;
+  margin:0 auto;
+  margin-top: 30px;
+  margin-left: 15px;
+}
+.container1 ul li{
+  width:280px;
+  height:350px;
+  /* border:#888888 solid 1px; */
+  margin-left:34px;
+  float:left;
+  overflow: hidden;
+}
+.container1 ul li p{
+  font-family: 微软雅黑;
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+}
+.container1 ul li a{
+  font-family: 微软雅黑;
+  font-size: 12px;
+  font-weight:normal;
+  float: right;
+}
+.container1 ul li .p1{
+  font-family: 微软雅黑;
+  font-size: 16px;
+  font-weight:normal;
+}
+.container1 div{
+  width:280px;
+  height:330px;
+  opacity:0.8;
+  position:absolute;
+  display:none;
+  bottom:0;
+  background-color:#474744;
+  padding-top:124px;
+}
+container1 div p{
+  font-size:13px;
+  font-family:微软雅黑;
+  margin-bottom: 26px;
+  text-align:center;
+  color:#cdcdcc;
+}
+
+/* 最后 */
+.header8{
+  height:77px;
+  background-color:#000000;
+  padding-top:33px;
+}
+.header8 ul{
+  width:1000px;
+  padding-left:200px;
+  height:38px;
+  margin:0 auto;
+}
+.header8 ul li{
+  height:38px;
+  float:left;
+  line-height: 38px;
+}
+.header8 ul li p{
+  font-family:微软雅黑;
+  font-size: 14px;
+  margin-left:15px;
+  margin-right:15px;
+  color:#ffffff;
+}
+.nv{
+  height:15px;
+  width:2px;
+  margin-top:4px;
+}
+.header9{
+  height:25px;
+  width:1200px;
+  margin:0 auto;
+}
+.header9 p{
+  font-family:微软雅黑;
+  font-size:14px;
+  color:#ffffff;
+  padding-right: 400px;
+  padding-left: 450px;
+  opacity: 0.8;
+}

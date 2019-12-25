@@ -1,0 +1,107 @@
+*{
+  padding:0px;
+  margin:0px;
+  margin: auto 0;
+}
+body, ul, li，button{
+  font-size:18px;
+  text-decoration: none;
+  list-style:none;
+}
+a{
+  text-decoration:none;
+}
+input{
+  border:0;
+}
+body{
+  background-color:#fff;
+}
+/* 导航栏 */
+.nav{
+  height: 100px;
+  margin: auto 0;
+  /* position: fixed;/*固定作用  */
+  /* background: url('imges/pic7.jpg'); */
+  /* background-color: #DEB887; */
+  overflow: hidden;
+  /* border-bottom: 3px solid black; */
+}
+.logo{
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+  margin-left: 20px;
+  float: left;
+}
+.name{
+  height: 50px;
+  margin-top: 15px;
+  margin-left: 30px;
+  font-size: 38px;
+  font-family: 微软雅黑;
+  float: left;
+}
+.sosuo{
+  width: 250px;
+  height: 40px;
+  margin-top: 50px;
+  margin-left: 50px;
+  float: left;
+}
+.aa{
+  width: 200px;
+  height: 35px;
+  border: 1px solid gray;
+}
+.bb{
+  width: 35px;
+  height: 35px;
+  font-family: 微软雅黑;
+  background-color: white;
+  color:#000000;
+   border: 1px solid gray;
+}
+
+.nav>ul{
+  width: 650px;
+  height: 100px;
+  float: right;
+}
+.box2{
+  width: 120px;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 530px;
+}
+.box2>button{
+  width: 50px;
+  height: 30px;
+  font-family: 微软雅黑;
+  font-size: 15px;
+  border-radius: 15px / 30%; 
+  text-align: center; 
+  /* background-color: #7ED321; */
+  border: 1px solid black;
+  display: inline;
+  text-align: center;
+}
+.daohanglan{
+  width: 600px;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 40px;
+  font-family: 微软雅黑;
+  font-size: 38px;
+}
+a{
+  color:#000000;
+}
+.menu{
+  height: 44px;5
+  margin: 0px 18px;
+  padding: 0px 10px;
+  list-style:none;
+  display:inline-block;
+  line-height: 44px;
+}

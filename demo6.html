@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			background: url('image/bg33.jpg') 5px 30px;
+		}
+		.box{
+			width: 300px;
+			height: 400px;
+			padding: 0 20px;
+			border: 2px dashed gray;
+			margin-top: 35px;
+			margin-left: 120px;
+		}
+		.tit{
+			font-family: 微软雅黑;
+			margin-top: 0px;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+		.tit span{
+			font-size: 20px;
+			color: gray;
+		}
+		.inp{
+			width: 100%;
+			height: 40px;
+			text-indent: 8px;
+		}
+		.notice{
+			height: 30px;
+			line-height: 30px;
+			font-size: 12px;
+			text-align: left;
+			text-decoration: none;
+		}
+ 
+		.code{
+			width: 60%;
+		}
+		.getCode{
+			width: 35%;
+			height: 44px;
+			float: right;
+			border: none;
+			background-color: #eee;
+		}
+		.codeImg{
+			height: 40px;
+		}
+		.btn{
+			background:gray;
+			width: 100%;
+			height: 40px;
+			border: none;
+			margin-top: 8px;
+			color:white;
+			border-radius: 3px;
+		}
+		.bbtn{
+			border-radius: 4px;
+			background-color: gray;
+			border: gray;
+			margin-left: 242px;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<button class="bbtn" onclick="window.location.href = '#'">返回首页</button>
+		<p class="tit">
+			<span>ʚ 用户登录 ɞ</span>
+		</p>
+
+		<input class="inp" type="text" placeholder="您的昵称           (ฅ◑ω◑ฅ) ">
+		<p class="notice"></p>
+
+		<input class="inp" type="password" placeholder="您的密码           ฅ( ̳• ◡ • ̳)ฅ">
+		<p class="notice"></p>
+
+		<div>
+			<input class="inp code" type="text" placeholder="输入下侧验证码">
+			<button class="getCode">获取验证码</button>
+		</div>
+		<div class="codeImg">
+			<!-- 点击‘获取验证码’按钮后，在此处添加 验证码图片的img标签 -->
+			<img src="" id="img">
+		</div>
+		<a href="demo.html" class="notice">
+			还没注册？点击注册爱宠小屋账号！
+		</a>
+		<br>
+		<input type="checkbox" checked>下次自动登录
+		<button class="btn">登录</button>
+	</div>
+<script>
+	//（1）失去焦点和获得焦点
+	var inp = document.getElementsByClassName("inp");
+	var notice = document.getElementsByClassName("notice");
+	inp[0].onfocus = function(){
+		notice[0].innerHTML ="请输入4-10位用户名";
+	}
+	inp[0].onblur = function(){
+		notice[0].innerHTML="";
+	}
+	inp[1].onfocus = function(){
+		notice[1].innerHTML ="请输入6-12位密码";
+	}
+	inp[1].onblur = function(){
+		notice[1].innerHTML ="";
+	}
+
+	//点击获取验证码
+	var getCode = document.getElementsByClassName("getCode");
+	var img = document.createElement('img');
+	var number;
+	var list=["image/zAZfB.jpg","image/ZEhUN.jpg","image/zFC9H.jpg","image/zhWY9.jpg","image/Zin4c.jpg","image/ZITGj.jpg","image/zj6iV.jpg","image/zjsKP.jpg","image/ZKc9S.jpg","image/zKDXU.jpg"];
+	getCode[0].onclick = function(){
+		number =Math.floor(Math.random()*9);
+		img.src = list[number];
+		document.getElementsByClassName("codeImg")[0].replaceChild(img,document.getElementsByClassName("codeImg")[0].firstChild);
+	}
+
+	//验证码、用户名、密码不符合要求时提示
+	var btn = document.getElementsByClassName("btn");
+	btn[0].onclick = function(){
+		var inpcode = document.getElementsByClassName("inp code");
+		var code = inpcode[0].value;
+		var na = inp[0].value;
+		var psd = inp[1].value;
+		var img = list[number];
+		if(na.length==0 || na.length<4 || na.length>10){
+			notice[0].innerHTML="用户名位数错误";
+		}
+		if(psd.length==0 || psd.length<6 || psd.length>12){
+			notice[1].innerHTML ="密码位数错误";
+		}
+		if(code.length==0 || code.length!=5 ||code!=img.slice(6,11)){
+			notice[2].innerHTML = "验证码错误";
+		}
+		if(na.length>3&&na.length<11&&psd.length>5&&psd.length<13&&code==img.slice(6,11)){
+			alert("登陆成功");
+		}
+	}
+	
+	
+	
+</script>
+</body>
+</html>
